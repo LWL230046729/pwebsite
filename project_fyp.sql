@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1:3308
--- 產生時間： 2024 年 10 月 13 日 23:38
+-- 產生時間： 2024 年 10 月 14 日 00:10
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -44,7 +44,19 @@ CREATE TABLE `place` (
 
 CREATE TABLE `plan` (
   `Plan_ID` varchar(20) NOT NULL,
-  `User_ID` varchar(20) NOT NULL
+  `User_ID` varchar(20) NOT NULL,
+  `Place_ID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `plan_detail`
+--
+
+CREATE TABLE `plan_detail` (
+  `Item_ID` varchar(20) NOT NULL,
+  `Plan_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
