@@ -1,2 +1,57 @@
-# LWL230046729.github.io
-Website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+    <link rel="stylesheet" href="style/form.css" type="text/css">
+    <title>Login</title>
+</head>
+<body>
+<?php
+        $myForm = <<<EOD
+             <form name="f1" method="post" action="$_SERVER[PHP_SELF]">
+                <div class="navbar">
+                    <a>SLMC</a>
+                </div>
+                <div class="login">
+                    <text>> Login</text>
+                </div>
+                <br />
+                <br />
+
+            <fieldset>
+            <br />
+                <div class="full-container">
+                    <table>
+                        <tr>
+                            <td>Name:</td>
+                            <td>
+                            <div class="full-container">
+                                    <input type="text" name="username" value=""/>
+                            </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Password:</td>
+                            <td>
+                                <input type="password" name="userpwd" value=""/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <input type="submit" name="submit" value="Login" class="button2 buttonB" />
+
+                <br /><br /><label>Please Contact our IT department if you forget your password</label>
+
+            </fieldset>
+            </form>
+        EOD;
+
+        echo $myForm;
+        }
+?>
+</body>
+</html>
